@@ -78,9 +78,11 @@ pytest_plugins = ['tempdir', 'helpers_namespace', 'salt-runtests-bridge']  # pyl
 
 # Define where not to collect tests from
 collect_ignore = ['setup.py']
+# pylint: enable=invalid-name
 
 
 # Patch PyTest logging handlers
+# pylint: disable=protected-access
 class LogCaptureHandler(salt.log.mixins.ExcInfoOnLogLevelFormatMixIn,
                         _pytest.logging.LogCaptureHandler):
     '''
@@ -101,6 +103,7 @@ class LiveLoggingStreamHandler(salt.log.mixins.ExcInfoOnLogLevelFormatMixIn,
 
 
 _pytest.logging._LiveLoggingStreamHandler = LiveLoggingStreamHandler
+# pylint: enable=protected-access
 
 # Reset logging root handlers
 for handler in logging.root.handlers[:]:
