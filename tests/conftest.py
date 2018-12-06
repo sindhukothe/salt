@@ -1004,7 +1004,6 @@ def session_minion_default_options(request, tempdir):
         return opts
 
 
-<<<<<<< HEAD
 def _get_virtualenv_binary_path():
     try:
         return _get_virtualenv_binary_path.__virtualenv_binary__
@@ -1124,7 +1123,6 @@ def bridge_pytest_and_runtests(session_root_dir,
     RUNTIME_VARS.RUNTIME_CONFIGS['syndic'] = freeze(session_syndic_config)
     RUNTIME_VARS.RUNTIME_CONFIGS['client_config'] = freeze(session_master_config)
 # <---- Salt Configuration -------------------------------------------------------------------------------------------
->>>>>>> Switch from TestDaemon to pytest-salt fixtures.
 
 
 @pytest.fixture(scope='session')
