@@ -177,6 +177,8 @@ def pytest_configure(config):
     and all plugins and initial conftest files been loaded.
     '''
     config.addinivalue_line('norecursedirs', os.path.join(CODE_DIR, 'templates'))
+
+    # Expose the markers we use to pytest CLI
     config.addinivalue_line(
         'markers',
         'destructive_test: Run destructive tests. These tests can include adding '
