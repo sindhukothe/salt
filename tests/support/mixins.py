@@ -738,6 +738,7 @@ def _fetch_events(q, opts):
             queue_item.task_done()
 
     atexit.register(_clean_queue)
+    opts = RUNTIME_VARS.RUNTIME_CONFIGS['minion']
     event = salt.utils.event.get_event('minion', sock_dir=opts['sock_dir'], opts=opts)
 
     # Wait for event bus to be connected
