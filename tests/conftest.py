@@ -857,6 +857,7 @@ def cli_bin_dir(tempdir,
             executable=sys.executable,
             code_dir=CODE_DIR,
             inject_sitecustomize=MAYBE_RUN_COVERAGE
+            inject_sitecustomize=True
         )
 
     # Return the CLI bin dir value
