@@ -49,14 +49,14 @@ import psutil
 from salt.ext import six
 
 # Import salt libs
-import salt.loader
 import salt.config
-import salt.utils.files
-import salt.utils.path
+import salt.loader
 import salt.log.setup
 import salt.log.mixins
+import salt.utils.files
+import salt.utils.path
 import salt.utils.platform
-from salt.utils.odict import OrderedDict
+from salt.serializers import yaml
 from salt.utils.immutabletypes import freeze
 
 # Import Pytest Salt libs
