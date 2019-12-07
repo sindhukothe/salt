@@ -11,7 +11,6 @@ from __future__ import absolute_import, unicode_literals
 import os
 import sys
 import logging
-import textwrap
 
 # Import Pytest Salt libs
 from pytestsalt.utils import cli_scripts
